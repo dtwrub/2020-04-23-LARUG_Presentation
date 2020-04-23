@@ -1,0 +1,140 @@
+---
+title: "Reproducible Data Analysis and Publishing in Chemistry with R"
+subtitle: "Creating a workshop experience during the ACS National Meeting"
+author: "Donna Wrublewski"
+date: "April 23, 2020"
+output:
+  xaringan::moon_reader:
+    css: ["./libs/remark-css/default.css", "./libs/remark-css/default-fonts.css"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+
+---
+
+# Co-Authors
+
+.pull-left[![Ye Li picture](li-photo.jpg)
+
+Dr. Ye Li, Librarian for Chemistry & Chemical Engineering,  MIT]
+
+.pull-right[![Steve Wathen picture](wathen-photo.jpg)
+
+Dr. Steven Wathen, Professor of Chemistry, Siena Heights University]
+
+---
+
+# Summary
+
+At the Fall 2019 American Chemical Society National Meeting, two chemistry librarians partnered with a chemistry faculty member to offer a hands-on computer programming workshop. The workshop used the R programming environment and was structured for beginners with no previous experience with it. Three main topics were covered during the five-hour session: introduction to R, working with QSAR data, and creating a report using R Markdown. This report will cover the workshop’s logistics, instructional design and content, and discuss feedback received from participants. Suggestions for future improvements will also be discussed.
+
+---
+
+# Event Goals and Target Audience
+
+--
+
+Provide intro to the R programming environment for chemists
+
+--
+
+Script-based data analysis and authoring tools allow chemists to streamline data workflows and enhance reproducibility
+
+--
+
+Improve transparency and reproducibility of research processes
+
+--
+
+Hands-on learning experience for participants
+
+--
+
+Resources for participants to share with their communities
+
+--
+
+Intended audience: attendees at the Fall 2019 ACS National Meeting: chemical information professionals, students, and librarians
+
+---
+
+# Logistics
+
+--
+
+Date and time: Saturday, August 24, 2019, 9am-2pm, two short breaks and a longer break for lunch
+
+Location: Omni Hotel, an ACS Conference Hotel and in close proximity to the convention center
+
+---
+
+# R Code
+
+```{r comment='#'}
+# a boring regression
+fit = lm(dist ~ 1 + speed, data = cars)
+coef(summary(fit))
+dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
+grep('天', dojutsu, value = TRUE)
+```
+
+---
+
+# Some Tips
+
+- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
+
+- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
+
+    ```yaml
+    output:
+      xaringan::moon_reader:
+        nature:
+          highlightLines: true
+    ```
+
+    See examples on the next page.
+
+---
+
+# CSS
+
+For example, suppose you want to change the font for code from the default "Source Code Pro" to "Ubuntu Mono". You can create a CSS file named, say, `ubuntu-mono.css`:
+
+```css
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+```
+
+Then set the `css` option in the YAML metadata:
+
+```yaml
+output:
+  xaringan::moon_reader:
+    css: ["default", "ubuntu-mono.css"]
+```
+
+Here I assume `ubuntu-mono.css` is under the same directory as your Rmd.
+
+See [yihui/xaringan#83](https://github.com/yihui/xaringan/issues/83) for an example of using the [Fira Code](https://github.com/tonsky/FiraCode) font, which supports ligatures in program code.
+
+---
+
+# Themes
+
+Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes:
+
+```{r}
+names(xaringan:::list_css())
+```
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).

@@ -70,133 +70,84 @@ Intended audience: attendees at the Fall 2019 ACS National Meeting: chemical inf
 
 --
 
-Date and time: Saturday, August 24, 2019, 9am-2pm, two short breaks and a longer break for lunch
+Date and Time: Saturday, August 24, 2019, 9am-2pm, two short breaks and a longer break for lunch
 
 --
 
-Location: Omni Hotel, an ACS Conference Hotel and in close proximity to the convention center
+Location of Workshop: Omni Hotel, an ACS Conference Hotel and in close proximity to the convention center
+
+--
+
+Number of Attendees: 18
+
+--
+
+Cost of Workshop: 
+- Instructors donated their time
+- Each participant paid a $40 registration fee
+- ACS Publications generously sponsored the rest of the facilities fees
+- ACS Division of Chemical Information provided logistical support and contingency funding
 
 ---
 
-# R Code
+# Instructional Design
 
+Approach using a Carpentries-style model: sticky notes for feedback, non-lecturing instructors providing individual support
 
-```r
-# a boring regression
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-```
+.pull-left[![Picture of Ye teaching](ye-room.jpg)]
+.pull-right[![Picture of Donna and Steve looking at feedback](donna-steve-stickies.jpg)]
+---
 
-```
-#               Estimate Std. Error   t value     Pr(&gt;|t|)
-# (Intercept) -17.579095  6.7584402 -2.601058 1.231882e-02
-# speed         3.932409  0.4155128  9.463990 1.489836e-12
-```
+# Content
 
-```r
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
-```
+The workshop was broken down into three parts:
 
-```
-# [1] "地爆天星" "天照"
-```
+--
+
+1. Introduction to R and the RStudio Environment (taught by Ye)
+
+--
+
+2. Working with QSAR data (taught by Steve)
+
+--
+
+3. Creating a reproducible report using R Markdown (taught by Donna)
+
+--
+
+Participants used a RStudio Cloud interface.
 
 ---
 
-# Some Tips
+# Want to have a look?
 
-- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
+--
 
-- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#&lt;&lt;`;
+![Doctor Who - Lets Go](https://media.giphy.com/media/Y1XrxoBKZHTHeky1Wy/giphy.gif)
 
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
+Materials repo: 
+https://github.com/YeLibrarian/R_ACS_20190824Materials
 
 ---
-
-# CSS
-
-Among all options in `xaringan::moon_reader`, the most challenging but perhaps also the most rewarding one is `css`, because it allows you to customize the appearance of your slides using any CSS rules or hacks you know.
-
-You can see the default CSS file [here](https://github.com/yihui/xaringan/blob/master/inst/rmarkdown/templates/xaringan/resources/default.css). You can completely replace it with your own CSS files, or define new rules to override the default. See the help page `?xaringan::moon_reader` for more information.
-
----
-
-# CSS
-
-For example, suppose you want to change the font for code from the default "Source Code Pro" to "Ubuntu Mono". You can create a CSS file named, say, `ubuntu-mono.css`:
-
-```css
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
-
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-```
-
-Then set the `css` option in the YAML metadata:
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "ubuntu-mono.css"]
-```
-
-Here I assume `ubuntu-mono.css` is under the same directory as your Rmd.
-
-See [yihui/xaringan#83](https://github.com/yihui/xaringan/issues/83) for an example of using the [Fira Code](https://github.com/tonsky/FiraCode) font, which supports ligatures in program code.
-
----
-
-# Themes
-
-Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes:
-
-
-```r
-names(xaringan:::list_css())
-```
-
-```
-##  [1] "chocolate-fonts"  "chocolate"        "default-fonts"   
-##  [4] "default"          "duke-blue"        "fc-fonts"        
-##  [7] "fc"               "hygge-duke"       "hygge"           
-## [10] "ki-fonts"         "ki"               "kunoichi"        
-## [13] "lucy-fonts"       "lucy"             "metropolis-fonts"
-## [16] "metropolis"       "middlebury-fonts" "middlebury"      
-## [19] "ninjutsu"         "rladies-fonts"    "rladies"         
-## [22] "robot-fonts"      "robot"            "rutgers-fonts"   
-## [25] "rutgers"          "shinobi"          "tamu-fonts"      
-## [28] "tamu"             "uo-fonts"         "uo"              
-## [31] "uol-fonts"        "uol"
-```
-
----
-
-# Themes
-
-To use a theme, you can specify the `css` option as an array of CSS filenames (without the `.css` extensions), e.g.,
-
-```yaml
-output:
-  xaringan::moon_reader:
-    css: [default, metropolis, metropolis-fonts]
-```
-
-If you want to contribute a theme to **xaringan**, please read [this blog post](https://yihui.org/en/2017/10/xaringan-themes).
-
----
-
-class: center, middle
 
 # Thanks!
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+--
+
+**ACS Publications** is gratefully acknowledged for their generous financial sponsorship of this event, without which it would not have been able to go forward.
+
+--
+
+The **ACS Division of Chemical Information** is also deeply thanked for their commitment and support, including logistical assistance and contingency funding.
+
+--
+
+**YOU** for your attention and interest!
+
+--
+
+I finally leared to create slides with [**xaringan**](https://github.com/yihui/xaringan). Thanks Yihui :)
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

@@ -1,11 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
-
 body { font-family: Arial, sans-serif; }
 h1, h2, h3 {
   font-family: Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
 }
-.remark-code, .remark-inline-code { font-family: 'Source Code Pro', 'Lucida Console', Monaco, monospace; }
+.remark-code, .remark-inline-code { font-family: 'Lucida Console', Monaco, monospace; }
 
 .remark-slide-content {
     font-family: Arial, sans-serif;

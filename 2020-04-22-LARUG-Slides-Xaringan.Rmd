@@ -64,77 +64,81 @@ Intended audience: attendees at the Fall 2019 ACS National Meeting: chemical inf
 
 --
 
-Date and time: Saturday, August 24, 2019, 9am-2pm, two short breaks and a longer break for lunch
+Date and Time: Saturday, August 24, 2019, 9am-2pm, two short breaks and a longer break for lunch
 
-Location: Omni Hotel, an ACS Conference Hotel and in close proximity to the convention center
+--
 
----
+Location of Workshop: Omni Hotel, an ACS Conference Hotel and in close proximity to the convention center
 
-# R Code
+--
 
-```{r comment='#'}
-# a boring regression
-fit = lm(dist ~ 1 + speed, data = cars)
-coef(summary(fit))
-dojutsu = c('地爆天星', '天照', '加具土命', '神威', '須佐能乎', '無限月読')
-grep('天', dojutsu, value = TRUE)
-```
+Number of Attendees: 18
 
----
+--
 
-# Some Tips
-
-- There are several ways to build incremental slides. See [this presentation](https://slides.yihui.org/xaringan/incremental.html) for examples.
-
-- The option `highlightLines: true` of `nature` will highlight code lines that start with `*`, or are wrapped in `{{ }}`, or have trailing comments `#<<`;
-
-    ```yaml
-    output:
-      xaringan::moon_reader:
-        nature:
-          highlightLines: true
-    ```
-
-    See examples on the next page.
+Cost of Workshop: 
+- Instructors donated their time
+- Each participant paid a $40 registration fee
+- ACS Publications generously sponsored the rest of the facilities fees
+- ACS Division of Chemical Information provided logistical support and contingency funding
 
 ---
 
-# CSS
+# Instructional Design
 
-For example, suppose you want to change the font for code from the default "Source Code Pro" to "Ubuntu Mono". You can create a CSS file named, say, `ubuntu-mono.css`:
+Approach using a Carpentries-style model: sticky notes for feedback, non-lecturing instructors providing individual support
 
-```css
-@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+.pull-left[![Picture of Ye teaching](ye-room.jpg)]
+.pull-right[![Picture of Donna and Steve looking at feedback](donna-steve-stickies.jpg)]
+---
 
-.remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
-```
+# Content
 
-Then set the `css` option in the YAML metadata:
+The workshop was broken down into three parts:
 
-```yaml
-output:
-  xaringan::moon_reader:
-    css: ["default", "ubuntu-mono.css"]
-```
+--
 
-Here I assume `ubuntu-mono.css` is under the same directory as your Rmd.
+1. Introduction to R and the RStudio Environment (taught by Ye)
 
-See [yihui/xaringan#83](https://github.com/yihui/xaringan/issues/83) for an example of using the [Fira Code](https://github.com/tonsky/FiraCode) font, which supports ligatures in program code.
+--
+
+2. Working with QSAR data (taught by Steve)
+
+--
+
+3. Creating a reproducible report using R Markdown (taught by Donna)
+
+--
+
+Participants used a RStudio Cloud interface.
 
 ---
 
-# Themes
+# Want to have a look?
 
-Don't want to learn CSS? Okay, you can use some user-contributed themes. A theme typically consists of two CSS files `foo.css` and `foo-fonts.css`, where `foo` is the theme name. Below are some existing themes:
+--
 
-```{r}
-names(xaringan:::list_css())
-```
+![Doctor Who - Lets Go](https://media.giphy.com/media/Y1XrxoBKZHTHeky1Wy/giphy.gif)
+
+Materials repo: 
+https://github.com/YeLibrarian/R_ACS_20190824Materials
 
 ---
-
-class: center, middle
 
 # Thanks!
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
+--
+
+**ACS Publications** is gratefully acknowledged for their generous financial sponsorship of this event, without which it would not have been able to go forward.
+
+--
+
+The **ACS Division of Chemical Information** is also deeply thanked for their commitment and support, including logistical assistance and contingency funding.
+
+--
+
+**YOU** for your attention and interest!
+
+--
+
+I finally leared to create slides with [**xaringan**](https://github.com/yihui/xaringan). Thanks Yihui :)

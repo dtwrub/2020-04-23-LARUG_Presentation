@@ -2,7 +2,7 @@
 title: "Reproducible Data Analysis and Publishing in Chemistry with R"
 subtitle: "Creating a workshop experience during the ACS National Meeting"
 author: "Donna Wrublewski"
-date: "April 23, 2020 <br /><br /> https://tinyurl.com/2020-04-23-larug-dw"
+date: "April 23, 2020 <br /><br /> https://tinyurl.com/2020-04-23-dw-larug"
 output:
   xaringan::moon_reader:
     css: ["./libs/remark-css/default.css", "./libs/remark-css/default-fonts.css"]
